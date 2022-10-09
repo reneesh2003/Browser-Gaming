@@ -3,11 +3,11 @@
   <head>  
     <meta charset = "utf-8">  
     <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">  
-    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>    
     <link rel="stylesheet" href="./dashboard.css"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
   </head>
   <body>  
     <div id="wrapper">  
@@ -19,13 +19,13 @@
               <a href="#"> Mini Project</a> 
             </div> 
           </div>  
-          <li><a href="#home">Home</a></li>  
-          <li><a href="#games">Games</a></li>  
-          <li><a href="#about">About Me</a> </li>  
-          <li><a href="#review">Review</a> </li> 
-          <li><a href="#contact">Contact</a></li>  
-          <li><a href="#followme">Follow me</a></li>  
-          <li><a href="/logout">Logout</a></li>
+          <li><a href="#home"><i class='fa fa-home'></i>  Home</a></li>  
+          <li><a href="#games"><i class='fas fa-gamepad'></i>  Games</a></li>  
+          <li><a href="#contact"><i class='fas fa-mail-bulk'></i>  Contact</a></li>  
+          <li><a href="#about"><i class='fa fa-address-card'></i>  About Me</a> </li>  
+          <li><a href="#message"><i class='fa fa-envelope'></i>  Send Message</a> </li> 
+          <li><a href="#followme"><i class='fa fa-heart'></i>  Follow me</a></li>  
+          <li><a href="/logout"><i class='fa fa-sign-out'></i>  Logout</a></li>
         </ul>  
       </nav>  
     <div id="home" class="col col-lg-offset-2 text-center">  
@@ -96,7 +96,7 @@
             <div class="row">
               <div class="col-md-8 text-center">
                 <h3>Tic Tac Toe</h3><br>
-                <a href=""><img src="./images/TTT.png" alt="" width="auto" height="100px"></a>
+                <a href="./TTT.html"><img src="./images/TTT.png" alt="" width="auto" height="100px"></a>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@
           </div>
         </div>
       </div>
-      <div class="section-2-container section-container-image-bg" id="section-2">
+      <div class="section-2-container section-container-image-bg" id="contact">
         <div class="container">
           <div class="row">
               <div class="col pt-5 mt-5 px-5 mx-5">
@@ -130,8 +130,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="section-3-container section-container-gray-bg" id="section-2">
+      
+      <div class="section-3-container section-container-gray-bg" id="about">
         <div class="container">
           <div class="row">
             <div class="col-sm-7 pt-5 mt-5 ">
@@ -147,7 +147,7 @@
               </p>
             </div>
             <div class="col-sm-4 p-4 mt-4">
-              <img src="./images/wd.jfif" alt="about-us">
+              <img src="./images/wd.jfif" alt="about-me">
             </div>
           </div>
           <div class="row">
@@ -167,38 +167,38 @@
               <p>Send an email to reneeshdenny@gmail.com to contact me or follow me on my social media channels.</p>
             </div>
           </div>
-          <div class="row">
+          <div class="row" id="message">
             <div class="col-md-6">
-              <h3>By eMail</h3>
+              <br>
+              <h3>Send Message</h3>
                 <div class="section-4-form">
-                  <form role="form" action="assets/contact.php" method="post">
-                    <div class="form-group">
-                      <label class="sr-only" for="contact-email">Email</label>
-                      <input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
+                  <form action="/message" method="post">
+                    <div class="form-outline>
+                      <label for="email">Email</label>
+                      <input class="form-control" type="email" name="email" id="email" placeholder="Email..." required /><br>
                     </div>
-                    <div class="form-group">
-                      <label class="sr-only" for="contact-subject">Subject</label>
-                      <input type="text" name="subject" placeholder="Subject..." class="contact-subject form-control" id="contact-subject">
+                    <div class="form-outline ">
+                      <label for="subject">Subject</label>
+                      <input class="form-control" type="text" name="subject" id="subject" placeholder="Subject...." required /><br>
                     </div>
-                    <div class="form-group">
-                      <label class="sr-only" for="contact-message">Message</label>
-                      <textarea name="message" placeholder="Message..." class="contact-message form-control" id="contact-message"></textarea>
+                    <div class="form-outline ">
+                      <label for="message">Message</label>
+                      <textarea name="message" placeholder="Message..." class="form-control" id="message"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-customized"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    <input style="padding-left: 2.5rem; padding-right: 2.5rem;" type="submit" id="submitDetails" name="submitDetails" class="btn btn-primary btn-lg registerbtn p-1" value="Submit Message" /><br>
                   </form>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>    
+        </div>   
     <div style="position:relative; bottom:0; height: 100px; width: 100%;" class="d-flex bg-primary justify-content-between p-4">
     <!-- Copyright -->
-    <div class="text-white mb-3 mb-md-0">
+    <div class="text-white p-1 mb-3 mb-md-0" id="followme">
       <p>Copyright © 2022.(URK20CS2075) - Web Devolopment Mini Project. All Rights Reserved</p>
     </div>
       <!-- Right -->
-    <div class="">
+    <div class="px-4">
       <a href="#!" class="text-white me-4">
         <i class="fab fa-facebook-f"></i>
       </a>

@@ -1,0 +1,50 @@
+body {
+    font-family: "Arial", sans-serif;
+    height: auto;
+    background-size:cover; 
+    background-image: url(./images/ttt.jpg);
+    background-repeat: no-repeat;
+}
+
+.game--container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 306px;
+    margin: 10px auto;
+    background-color: #11213a;
+    opacity: 70%;
+    color: #04c0b2;
+}
+
+.cell {
+    font-family: "Permanent Marker", cursive;
+    width: 100px;
+    height: 100px;
+    box-shadow: 2px 2px 2px 2px #ecd7ba;
+    border: 2px solid #ecd7ba;
+    cursor: pointer;
+    font-size: 60px;
+}
+
+.game--status {
+    font-size: 50px;
+    color: #b6b9d6;
+    margin: 20px auto;
+}
+.button {
+    transition-duration: 0.4s;
+    border-color: white;
+  }
+.button:hover {
+    background-color: #ffffff; /* Green */
+    color: #0275d8;
+  }
+.button1 {
+    background-color: #4a4d50; /* Green */
+    color: #ffffff;
+}
+.button1:hover {
+    background-color: #ffffff; /* Green */
+    color: #4a4d50;
+  }
+    

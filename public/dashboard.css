@@ -3,8 +3,6 @@ body {
     overflow-x: hidden;  
     background-color: #ffffff;  
 }  
-body,  
-html { height: 100%;}  
 .nav .open > a,   
 .nav .open > a:hover,   
 .nav .open > a:focus {background-color: transparent;}  
@@ -28,7 +26,7 @@ html { height: 100%;}
     margin-left: -220px;  
     overflow-y: auto;  
     overflow-x: hidden;  
-    background: #1a1a1a;  
+    background: #38383a;  
     -webkit-transition: all 0.5s ease;  
     -moz-transition: all 0.5s ease;  
     -o-transition: all 0.5s ease;  
@@ -80,7 +78,7 @@ html { height: 100%;}
     z-index: -1;  
     height: 100%;  
     width: 3px;  
-    background-color: #1c1c1c;  
+    background-color: #dad1d1;  
     -webkit-transition: width .2s ease-in;  
       -moz-transition:  width .2s ease-in;  
        -ms-transition:  width .2s ease-in;  
@@ -142,8 +140,8 @@ html { height: 100%;}
 .sidebar-brand {  
     height: 65px;  
     position: relative;  
-    background:#212531;  
-    background: linear-gradient(to right bottom, #2f3441 50%, #212531 50%);  
+    background:#727272;  
+    background: linear-gradient(to right bottom, #8b909b 50%, #383d4e 50%);  
    padding-top: 1em;  
 }  
 .sidebar-brand a {  
@@ -152,76 +150,6 @@ html { height: 100%;}
 .sidebar-brand a:hover {  
     color: #fff;  
     text-decoration: none;  
-}  
-.dropdown-header {  
-    text-align: center;  
-    font-size: 1em;  
-    color: #ddd;  
-    background:#212531;  
-    background: linear-gradient(to right bottom, #2f3441 50%, #212531 50%);  
-}  
-.sidebar-nav .dropdown-menu {  
-    position: relative;  
-    width: 100%;  
-    padding: 0;  
-    margin: 0;  
-    border-radius: 0;  
-    border: none;  
-    background-color: #222;  
-    box-shadow: none;  
-}  
-.dropdown-menu.show {  
-    top: 0;  
-}  
-.nav.sidebar-nav li a::before {  
-    font-family: fontawesome;  
-    content: "\f12e";  
-    vertical-align: baseline;  
-    display: inline-block;  
-    padding-right: 5px;  
-}  
-a[href*="#home"]::before {  
-  content: "\f015" !important;  
-}  
-a[href*="#about"]::before {  
-  content: "\f129" !important;  
-}  
-a[href*="#events"]::before {  
-  content: "\f073" !important;  
-}  
-a[href*="#sdd"]::before {  
-  content: "\f073" !important;  
-}  
-a[href*="#team"]::before {  
-  content: "\f0c0" !important;  
-}  
-a[href*="#sdfd"]::before {  
-  content: "\f0b1" !important;  
-}  
-a[href*="#games"]::before {  
-  content: "\f03e" !important;  
-}  
-a[href*="#videos"]::before {  
-  content: "\f03d" !important;  
-}  
-a[href*="#review"]::before {  
-  content: "\f02d" !important;  
-}  
-a[href*="#sads"]::before {  
-  content: "\f1fc" !important;  
-}  
-a[href*="#sad"]::before {  
-  content: "\f02e" !important;  
-}  
-a[href*="#services"]::before {  
-  content: "\f013" !important;  
-}  
-a[href*="#contact"]::before {  
-  content: "\f086" !important;  
-}  
-a[href*="#followme"]::before {  
-  content: "\f099" !important;  
-  color: #0084b4;  
 }  
 .hamburger {  
   position: fixed;  
@@ -435,5 +363,3 @@ a[href*="#followme"]::before {
         background-image: url(./images/7580.jpg);
         background-repeat: no-repeat;
 }
-
-footer { padding: 40px 0; }

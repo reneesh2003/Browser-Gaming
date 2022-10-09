@@ -21,10 +21,11 @@ $(document).ready(function () {
     $('[data-toggle="offcanvas"]').click(function () {  
           $('#wrapper').toggleClass('toggled');  
     });    
+    var d; 
     fetch('http://localhost:3000/results')
 .then(response =>{return response.json()})
-.then(data=>$('#user').html("Welcome "+data[0].name))
-.catch(err=>console.log(err))
+.then(data=>$('#user').html("Welcome "+data[0].name) && $('#email').val(data[0].email))
+.catch(err=>console.log(err))   
     
   });  
   

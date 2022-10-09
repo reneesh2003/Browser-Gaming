@@ -1,7 +1,7 @@
 body{
-    background-image: url(./images/6045712.jpg);
-    width: 100%;
+    background-image: url(./images/rps.jpg);
     height: auto;
+    background-size:cover; 
     background-repeat: no-repeat;
 }
 img{
@@ -39,3 +39,21 @@ img{
 #color{
     padding: 10px;
 }
+.button {
+    transition-duration: 0.4s;
+    background-color: #0275d8;
+    color: #ffffff; ;
+    border-color: white;
+  }
+.button:hover {
+    background-color: #ffffff; /* Green */
+    color: #0275d8;
+  }
+.button1 {
+    background-color: #4a4d50; /* Green */
+    color: #ffffff;
+}
+.button1:hover {
+    background-color: #ffffff; /* Green */
+    color: #4a4d50;
+  }
