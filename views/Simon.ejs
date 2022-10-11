@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon</title>
+  <link rel="icon" href="./images/logo_icon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>  
+  <link rel="stylesheet" href="Simon.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+<body>
+    <h1 class="border border-white text-white py-3"">Simon Game</h1>
+  <form action="/sign_in" method="post" class="text-start">
+  <button  class="btn border border-secondary button1 col mx-4">Home</button></form>
+  <div>
+    <div class="col px-5 mx-5 pb-5 text-white">
+      <div class=""><br>
+        <h5>HOW TO PLAY</h5>
+          <marquee behavior="slide" direction="up"><div>The Simon game has four colored buttons, each producing a particular tone when it is pressed or activated by the device. A round in the game consists of the device lighting up one or more buttons in a random order, after which the player must reproduce that order by pressing the buttons.
+             As the game progresses, the number of buttons to be pressed increases.</div></marquee>
+      </div>
+    </div>
+  </div>
+  <h1 id="level-title">Press Start Key to Start the Game</h1>
+  <div class="container ">
+    <div class="row d-flex justify-content-center">
+      <div type="button" id="green" class="button green ">
+
+      </div>
+
+      <div type="button" id="red" class="button red ">
+
+      </div>
+    </div>
+
+
+    <div class="row d-flex justify-content-center">
+
+      <div type="button" id="yellow" class="button yellow col-sm-6">
+
+      </div>
+      <div type="button" id="blue" class="button blue col-sm-6">
+
+      </div>
+
+    </div>
+
+  </div>
+  <button class="game--start btn btn-primary button2">Start Game</button><br><br>
+
+  <div style="position:relative; bottom:0; height: 120px; width: 100%;" class=" border border-white p-4">
+    <!-- Copyright -->
+    <div class="text-white col mb-3 mb-md-0">
+      <p>Copyright © 2022.(URK20CS2075) - Web Devolopment Mini Project. All Rights Reserved</p>
+    </div>
+    <!-- Copyright -->
+
+    <!-- Right -->
+    <div class=" px-4">
+      <a href="#!" class="text-white me-sm-3">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#!" class="text-white me-sm-3">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#!" class="text-white me-sm-3">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="#!" class="text-white me-sm-3">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="Simon.js" charset="utf-8"></script>
+</body>
+
+</html>
