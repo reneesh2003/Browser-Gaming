@@ -1,0 +1,62 @@
+body{
+    background-image: url(./images/rps.jpg);
+    height: auto;
+    background-size:cover; 
+    background-repeat: no-repeat;
+}
+img{
+    width: auto;
+    height: 150px;
+}
+.right{
+    width: auto;
+    height: 200px;
+}
+.center #how_to_play{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    margin: 10%;
+    backdrop-filter: blur(10px);
+}
+@keyframes blinkingBackground1{
+    50%		{ background-color: #10c018;}}
+@keyframes blinkingBackground2{
+    50%		{ background-color: #b11212;}}
+@keyframes blinkingBackground3{
+    50%		{ background-color: #000000;}}
+
+.center #score{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: auto;
+    justify-content: center;
+    font-size: large;
+    font-weight: bold;
+}
+#color{
+    padding: 10px;
+}
+.button {
+    transition-duration: 0.4s;
+    background-color: #0275d8;
+    color: #ffffff; ;
+    border-color: white;
+  }
+.button:hover {
+    background-color: #ffffff; /* Green */
+    color: #0275d8;
+  }
+.button1 {
+    background-color: #4a4d50; /* Green */
+    color: #ffffff;
+}
+.button1:hover {
+    background-color: #ffffff; /* Green */
+    color: #4a4d50;
+  }

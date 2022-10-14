@@ -17,8 +17,8 @@
       <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation"> 
         <ul class="nav sidebar-nav">  
           <div class="sidebar-header">  
-            <div class="sidebar-brand">
-              <a href="#"><img src="./images/Myproject.png" height="50px" alt=""> Mini Project</a> 
+            <div class="sidebar-brand text-white">
+              <img src="./images/Myproject.png" height="50px" alt=""><br>Gamers
             </div> 
           </div>  
           <li><a href="#home"><i class='fa fa-home'></i>  Home</a></li>  
@@ -31,7 +31,7 @@
         </ul>  
       </nav> 
     <div id="home" class="col col-lg-offset-2 text-center">  
-      <h1> Gaming Website </h1>  
+      <img src="./images/logo_main.png" alt="" height="50px"> 
       <h5 >Welcome <%= Name %></h5>
     </div>  
     <div id="page-content-wrapper">  
@@ -90,7 +90,7 @@
             <div class="row">
               <div class="col-md-8 text-center">
                 <h3>Rock Paper Scissors</h3>
-                <form action="/RPS" method="post">
+                <form action="/home/rps" method="post">
                   <input type="image" src="./images/RPS.png" name="submit" width="auto" height="100px" alt="submit"/>  
                 </form>
               </div>
@@ -100,7 +100,7 @@
             <div class="row">
               <div class="col-md-8 text-center">
                 <h3>Tic Tac Toe</h3><br>
-                <form action="/TTT" method="post">
+                <form action="/home/ttt" method="post">
                 <input type="image" src="./images/TTT.png" name="submit" width="auto" height="100px" alt="submit"/>  </form>
               </div>
             </div>
@@ -109,15 +109,15 @@
             <div class="row">
               <div class="col-md-8 text-center">
                 <h3>Simon Game</h3>
-                <form action="/Simon" method="post"><br>
+                <form action="/home/simon" method="post"><br>
                 <input type="image" src="./images/simon.png" name="submit" width="auto" height="100px" alt="submit"/>  </form>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row d-flex justify-content-center " style="background-color: rgb(241, 237, 237);">
-        <div class="col-md-5  px-4 mx-4 ">
+      <div class="row d-flex justify-content-center ">
+        <div class="col-md-5  px-4  ">
           <br><br><h4 class="text-center">Game Playing History</h4><br>
           <table class="table border" style="background-color: rgb(184, 179, 179);" >
             <thead>
@@ -148,8 +148,8 @@
       <div class="section-2-container section-container-image-bg" id="contact">
         <div class="container">
           <div class="row">
-              <div class="col pt-5 mt-5 px-5 mx-5">
-                <h2>I Think That...</h2>
+              <div class="text-black col pt-5 mt-5 px-5">
+                <h2 class="text-black">I Think That...</h2>
                 <p>
                   It will be really helful if u can take your time and give reviews about the website so i can improve upon it.
                   I thank you for taking your time and you can contact me anytime using the mail id given in contact me section.
@@ -199,7 +199,7 @@
           <div class="row">
             <div class="col section-4 pt-5 mt-5" >
               <h2>Contact Us</h2>
-              <p>Send an email to reneeshdenny@gmail.com to contact me or follow me on my social media channels.</p>
+              <p>Send an email to rendengamers@gmail.com to contact me or follow me on my social media channels.</p>
             </div>
           </div>
           <div class="row" id="message">
@@ -229,28 +229,30 @@
             </div>
           </div>
         </div>   
-    <div style="position:relative; bottom:0; height: 100px; width: 100%;" class="d-flex bg-primary justify-content-between p-4">
-    <!-- Copyright -->
-    <div class="text-white p-1 mb-3 mb-md-0" id="followme">
-      <p>Copyright © 2022.(URK20CS2075) - Web Devolopment Mini Project. All Rights Reserved</p>
-    </div>
-      <!-- Right -->
-    <div class="px-4">
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="#!" class="text-white">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </div>
+        <div style="position:relative; bottom:0; height: 120px; width: 100%;" class="text-center bg-primary p-4">
+          <!-- Copyright -->
+          <div class="text-white col mb-3 mb-md-0">
+            <p>Copyright © 2022.(URK20CS2075) - Web Devolopment Mini Project. All Rights Reserved</p>
+          </div>
+          <!-- Copyright -->
+      
+          <!-- Right -->
+          <div class="px-4">
+            <a href="#!" class="text-white me-sm-4">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#!" class="text-white me-sm-4">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#!" class="text-white me-sm-4">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="#!" class="text-white me-sm-4">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+          <!-- Right -->
+        </div>
 </div>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"> </script>  
     <script src="./dashboard.js"></script>  

@@ -2,7 +2,6 @@ var express=require("express");
 var bodyParser=require("body-parser");
 var ejs=require("ejs");
 const mongoose = require('mongoose');
-const { Int32, Double } = require("bson");
 mongoose.connect('mongodb://localhost:27017/reneesh');
 var db=mongoose.connection;
 db.on('error', console.log.bind(console, "connection error"));
@@ -63,14 +62,14 @@ app.post('/sign_up', function(req,res){
       })  
 })
 
-app.post('/RPS', function(req,res){
+app.post('/home/rps', function(req,res){
       db.collection("last_used").find({email:global.email}, {$exists: true}).toArray(function(err, docs) //find if documents that satisfy the criteria exist
     { console.log(docs);
       db.collection('last_used').updateOne({ email:global.email}, { $set: { "RPS": da+"/"+(mo+1)+"/"+y+"  "+h+":"+m+":"+s }});
     })
   return res.render('RPS.ejs');
 });
-app.post('/TTT', function(req,res){
+app.post('/home/ttt', function(req,res){
       console.log(global.email)
      
       db.collection("last_used").find({email:global.email}, {$exists: true}).toArray(function(err, docs) //find if documents that satisfy the criteria exist
@@ -79,7 +78,7 @@ app.post('/TTT', function(req,res){
     })
   return res.render('TTT.ejs');
 });
-app.post('/Simon', function(req,res){
+app.post('/home/simon', function(req,res){
   console.log(global.email)
  
   db.collection("last_used").find({email:global.email}, {$exists: true}).toArray(function(err, docs) //find if documents that satisfy the criteria exist
@@ -90,7 +89,7 @@ return res.render('Simon.ejs');
 });
 global.email=0
 global.password=0
-app.post('/sign_in', function(req,res){
+app.post('/home', function(req,res){
     var email_l =req.body.email;
     var pass_l = req.body.password;
     if (global.email===0){global.email=email_l
@@ -158,5 +157,10 @@ app.get("/logout",(req,res)=>{
   global.email=0
   global.password=0
   return res.render('index.ejs',{error: ""});
+});
+app.post("/register",(req,res)=>{
+  global.email=0
+  global.password=0
+  return res.render('signup.ejs',{error: ""});
 });
 console.log("server listening at port 3000");
