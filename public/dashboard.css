@@ -1,8 +1,14 @@
 body {  
     position: relative;  
     overflow-x: hidden;  
-    background-color: #ffffff;  
+    background-color: #ebeaea;  
 }  
+.border-dark{
+  border-radius: 20%;
+}
+#games{
+  border-color: #000000;
+}
 .nav .open > a,   
 .nav .open > a:hover,   
 .nav .open > a:focus {background-color: transparent;}  
@@ -39,11 +45,6 @@ body {
   
 #wrapper.toggled #sidebar-wrapper {  
     width: 220px;  
-}  
-  
-#page-content-wrapper {  
-    width: 100%;  
-    padding-top: 70px;  
 }  
   
 #wrapper.toggled #page-content-wrapper {  

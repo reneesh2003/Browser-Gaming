@@ -30,17 +30,18 @@
           <li><a href="/logout"><i class='fa fa-sign-out'></i>  Logout</a></li>
         </ul>  
       </nav> 
-    <div id="home" class="col col-lg-offset-2 text-center">  
-      <img src="./images/logo_main.png" alt="" height="50px"> 
-      <h5 >Welcome <%= Name %></h5>
-    </div>  
-    <div id="page-content-wrapper">  
+     
+    <div >  
       <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">  
         <span class="hamb-top"></span>  
         <span class="hamb-middle"></span>  
         <span class="hamb-bottom"></span>  
       </button>
     </div></div> 
+    <div id="home" class="col col-lg-offset-2 text-center">  
+      <img src="./images/logo_main.png" alt="" height="50px"> 
+      <h5 >Welcome <%= Name %></h5>
+    </div> 
       <div class="container">  
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
           <!-- Indicators -->
@@ -79,7 +80,7 @@
         </div>
       </div>
       <br><br>
-      <div id="games" class="container p-2 " >
+      <div id="games" class="border container p-2 " >
         <div class="row">
           <div class="col section-1 section-description">
             <h2>Games</h2><br>
@@ -88,7 +89,7 @@
         <div class="row ">
           <div class="col-md-4 pt-4 ">
             <div class="row">
-              <div class="col-md-8 text-center">
+              <div class="col-md-8  text-center pb-4 border border-dark">
                 <h3>Rock Paper Scissors</h3>
                 <form action="/home/rps" method="post">
                   <input type="image" src="./images/RPS.png" name="submit" width="auto" height="100px" alt="submit"/>  
@@ -98,7 +99,7 @@
           </div>
           <div class="col-md-4 pt-4">
             <div class="row">
-              <div class="col-md-8 text-center">
+              <div class="col-md-8 text-center pb-4 border border-dark">
                 <h3>Tic Tac Toe</h3><br>
                 <form action="/home/ttt" method="post">
                 <input type="image" src="./images/TTT.png" name="submit" width="auto" height="100px" alt="submit"/>  </form>
@@ -107,7 +108,7 @@
           </div>
           <div class="col-md-4 pt-4">
             <div class="row">
-              <div class="col-md-8 text-center">
+              <div class="col-md-8 text-center pb-4 border border-dark">
                 <h3>Simon Game</h3>
                 <form action="/home/simon" method="post"><br>
                 <input type="image" src="./images/simon.png" name="submit" width="auto" height="100px" alt="submit"/>  </form>

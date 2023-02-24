@@ -2,7 +2,7 @@ var express=require("express");
 var bodyParser=require("body-parser");
 var ejs=require("ejs");
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/reneesh');
+mongoose.connect('mongodb://reneesh:reneesh2003@ac-ugqzmai-shard-00-00.use5zvx.mongodb.net:27017,ac-ugqzmai-shard-00-01.use5zvx.mongodb.net:27017,ac-ugqzmai-shard-00-02.use5zvx.mongodb.net:27017/?ssl=true&replicaSet=atlas-90s9bj-shard-0&authSource=admin&retryWrites=true&w=majority');
 var db=mongoose.connection;
 db.on('error', console.log.bind(console, "connection error"));
 db.once('open', function(callback){
