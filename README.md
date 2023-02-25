@@ -9,3 +9,5 @@ Games engage the player for a long time and improve cognitive skills. This web b
 Client: EJS, CSS, BOOTSTRAP, JavaScript
 
 Server: Node, Express, MongoDB
+
+Replit Web Host Link: https://Mini-Project.reneeshdenny.repl.co
