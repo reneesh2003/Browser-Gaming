@@ -95,6 +95,7 @@ function startOver(){
 
 function playSound(name){
   var audio=new Audio("sounds/"+name+".mp3");
+  console.log("sounds/"+name+".mp3")
   audio.play();
 }
 

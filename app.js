@@ -15,13 +15,15 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
    extended: true
 }));
-var d= new Date();
-var h=d.getHours();
-var m=d.getMinutes();
-var s=d.getSeconds();
-var y=d.getFullYear();
-var mo=d.getMonth();
-var da=d.getDate();
+const time= function(){
+  d= new Date();
+h=d.getHours();
+m=d.getMinutes();
+s=d.getSeconds();
+y=d.getFullYear();
+mo=d.getMonth();
+da=d.getDate();
+}
 const detailsSchema= new mongoose.Schema({
     name: String,
     email: String,
@@ -31,6 +33,7 @@ const detailsSchema= new mongoose.Schema({
   });
   const details= mongoose.model("user_details",detailsSchema);
 app.post('/sign_up', function(req,res){
+  time()
     const post= new details({
    name : req.body.name,
    email : req.body.email,
@@ -65,13 +68,14 @@ app.post('/sign_up', function(req,res){
 app.post('/home/rps', function(req,res){
       db.collection("last_used").find({email:global.email}, {$exists: true}).toArray(function(err, docs) //find if documents that satisfy the criteria exist
     { console.log(docs);
+      time()
       db.collection('last_used').updateOne({ email:global.email}, { $set: { "RPS": da+"/"+(mo+1)+"/"+y+"  "+h+":"+m+":"+s }});
     })
   return res.render('RPS.ejs');
 });
 app.post('/home/ttt', function(req,res){
       console.log(global.email)
-     
+      time()
       db.collection("last_used").find({email:global.email}, {$exists: true}).toArray(function(err, docs) //find if documents that satisfy the criteria exist
     { console.log(docs);
       db.collection('last_used').updateOne({ email:global.email}, { $set: { "TTT": da+"/"+(mo+1)+"/"+y+"  "+h+":"+m+":"+s }});
@@ -80,7 +84,7 @@ app.post('/home/ttt', function(req,res){
 });
 app.post('/home/simon', function(req,res){
   console.log(global.email)
- 
+  time()
   db.collection("last_used").find({email:global.email}, {$exists: true}).toArray(function(err, docs) //find if documents that satisfy the criteria exist
 { console.log(docs);
   db.collection('last_used').updateOne({ email:global.email}, { $set: { "Simon": da+"/"+(mo+1)+"/"+y+"  "+h+":"+m+":"+s }});
