@@ -67,26 +67,24 @@ app.post('/sign_up', function(req,res){
 
 app.post('/home/rps', function(req,res){
       db.collection("last_used").find({email:global.email}, {$exists: true}).toArray(function(err, docs) //find if documents that satisfy the criteria exist
-    { console.log(docs);
+    { 
       time()
       db.collection('last_used').updateOne({ email:global.email}, { $set: { "RPS": da+"/"+(mo+1)+"/"+y+"  "+h+":"+m+":"+s }});
     })
   return res.render('RPS.ejs');
 });
 app.post('/home/ttt', function(req,res){
-      console.log(global.email)
       time()
       db.collection("last_used").find({email:global.email}, {$exists: true}).toArray(function(err, docs) //find if documents that satisfy the criteria exist
-    { console.log(docs);
+    { 
       db.collection('last_used').updateOne({ email:global.email}, { $set: { "TTT": da+"/"+(mo+1)+"/"+y+"  "+h+":"+m+":"+s }});
     })
   return res.render('TTT.ejs');
 });
 app.post('/home/simon', function(req,res){
-  console.log(global.email)
   time()
   db.collection("last_used").find({email:global.email}, {$exists: true}).toArray(function(err, docs) //find if documents that satisfy the criteria exist
-{ console.log(docs);
+{ 
   db.collection('last_used').updateOne({ email:global.email}, { $set: { "Simon": da+"/"+(mo+1)+"/"+y+"  "+h+":"+m+":"+s }});
 })
 return res.render('Simon.ejs');
@@ -103,18 +101,14 @@ app.post('/home', function(req,res){
        "password":pass_l,
     }
    
-    console.log(data_l,global.email,global.password)
     db.collection("user_details").find({email:global.email,password:global.password}, {$exists: true}).toArray(function(err, docs) //find if documents that satisfy the criteria exist
     {     
-        if(docs.length > 0) //if exists
+        if(docs.length > 0) 
         {
-            console.log(global.email)
-            console.log("Login Successfull")
             db.collection("last_used").find({email:global.email}, {$exists: true}).toArray(function(err, docs_in){
-                console.log(docs_in); // print out what it sends back
                 return res.render('dashboard.ejs',{ Name: docs[0].name, email: docs[0].email, rps_lp:docs_in[0].RPS,ttt_lp:docs_in[0].TTT,Simon_lp:docs_in[0].Simon});})
         }
-        else // if it does not 
+        else 
         {
             global.email=0
             global.password=0
@@ -136,13 +130,9 @@ app.post('/home', function(req,res){
     subject: req.body.subject,
     message: req.body.message
   });
-  db.collection("user_details").find({email:global.email}, {$exists: true}).toArray(function(err, docs) //find if documents that satisfy the criteria exist
-    {     
-            console.log(global.email)
-            console.log("Login Successfull")
-            
-            db.collection("last_used").find({email:global.email}, {$exists: true}).toArray(function(err, docs_in){
-                console.log(docs_in); // print out what it sends back
+  db.collection("user_details").find({email:global.email}, {$exists: true}).toArray(function(err, docs) 
+    {       
+            db.collection("last_used").find({email:global.email}, {$exists: true}).toArray(function(err, docs_in){ 
                 post.save((err)=>{
                   if(!err)
                   res.render('dashboard.ejs',{ Name: docs[0].name, email: docs[0].email, rps_lp:docs_in[0].RPS,ttt_lp:docs_in[0].TTT,Simon_lp:docs_in[0].Simon});})
