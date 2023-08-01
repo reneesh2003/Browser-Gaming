@@ -10,4 +10,4 @@ Client: EJS, CSS, BOOTSTRAP, JavaScript
 
 Server: Node, Express, MongoDB
 
-Replit Web Host Link: https://Mini-Project.reneeshdenny.repl.co
+Replit Web Host Link: https://browser-gaming.reneeshdenny.repl.co
